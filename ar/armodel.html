@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        #content {
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .viewer {
+            width: 800px;
+            height: 600px;
+            background-color: darkgrey;
+            float: left;
+        }
+    </style>
+    <body>
+        <div id="content">
+            <!--<div id="ios">
+                <a rel="ar" href="./gc_esri.usdz">
+                    <img style="width:400px;" src="./gc_esri.png">
+                </a>
+            </div>-->
+            <div>
+                <model-viewer class="viewer" alt="A 3D model of the grand canyon." src="./gc_esri_large.gltf" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="gc_esri.usdz"></model-viewer>
+            </div>
+        </div>
+
+    </body>
+    
+    <script type="module" src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer-legacy.js"></script>
+    <script>
+        /*const a = document.createElement("a");
+        if (!a.relList.supports("ar")) {
+            document.getElementById("ios").style.display = "none";
+            document.getElementById("nonios").style.display = "";
+        }*/
+    </script>
+</html>
