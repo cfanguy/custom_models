@@ -47,11 +47,7 @@
         var sceneToRender = null;
         var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }); };
         
-        var createScene = function () {
-        
-            // Low Poly Character with Blender Tutorial of Grant Abbitt: https://www.youtube.com/user/mediagabbitt
-            // Character animations by Mixamo: https://www.mixamo.com/
-        
+        var createScene = function () {        
             engine.enableOfflineSupport = false;
         
             // Scene and Camera
@@ -92,10 +88,11 @@
             groundMaterial.specularColor = new BABYLON.Color3(.1, .1, .1);
             ground.material = groundMaterial;
         
-            // Load hero character
+            // culling issue?
+            // TODO: redo model from fbx in blender and export to gltf
             BABYLON.SceneLoader.ImportMesh("", "./models/", "cave.gltf", scene, function (newMeshes, particleSystems, skeletons, animationGroups) {
                 var model = newMeshes[0];
-                model.scaling.scaleInPlace(0.1);
+                model.scaling.scaleInPlace(1.0);
                 camera1.target = model;
             });
         
