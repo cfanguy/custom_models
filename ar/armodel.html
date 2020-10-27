@@ -8,6 +8,11 @@
             margin: 0;
             padding: 0;
         }
+
+        span {
+            color: white;
+        }
+
         #content {
             width: 800px;
             margin-left: auto;
@@ -30,8 +35,16 @@
                 </a>
             </div>-->
             <div>
+                <span>Cave GLTF and USDZ</span>
                 <model-viewer class="viewer" alt="A 3D model of the grand canyon." src="./cave.gltf" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="cave.usdz"></model-viewer>
-                <model-viewer class="viewer" alt="A 3D model of the grand canyon." src="./gc_esri.gltf" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="gc_esri.usdz"></model-viewer>
+                <br>
+                <br>
+                <span>Cave GLB and USD</span>
+                <model-viewer class="viewer" alt="A 3D model of the grand canyon." src="./cave.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="cave.usd"></model-viewer>
+                <br>
+                <br>
+                <span>Grand Canyon</span>
+                <model-viewer class="viewer" alt="A 3D model of the grand canyon." src="./gc.gltf" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="gc.usdz"></model-viewer>
             </div>
         </div>
 
