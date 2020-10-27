@@ -24,13 +24,14 @@
     </style>
     <body>
         <div id="content">
-            <div id="ios">
-                <a rel="ar" href="./cave.usd">
-                    <img style="width:400px;" src="./cave.jpg">
+            <!--<div id="ios">
+                <a rel="ar" href="./gc_esri.usdz">
+                    <img style="width:400px;" src="./gc_esri.png">
                 </a>
-            </div>
-            <div id="nonios">
-                <model-viewer class="viewer" alt="A 3D model of the grand canyon." src="./cave.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="./cave.usd"></model-viewer>
+            </div>-->
+            <div>
+                <model-viewer class="viewer" alt="A 3D model of the grand canyon." src="./cave.gltf" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="cave.usdz"></model-viewer>
+                <model-viewer class="viewer" alt="A 3D model of the grand canyon." src="./gc_esri.gltf" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="gc_esri.usdz"></model-viewer>
             </div>
         </div>
 
