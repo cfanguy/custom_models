@@ -21,30 +21,38 @@
         }
 
         .viewer {
-            width: 800px;
-            height: 600px;
+            width: 350px;
+            height: 200px;
             background-color: darkgrey;
+        }
+        
+        .floatLeft {
             float: left;
+        }
+        
+        .floatRight {
+            float: right;
         }
     </style>
     <body>
         <div id="content">
-            <!--<div id="ios">
-                <a rel="ar" href="./gc_esri.usdz">
-                    <img style="width:400px;" src="./gc_esri.png">
-                </a>
-            </div>-->
             <div>
-                <span>Block Test GLB and USDZ</span>
-                <model-viewer class="viewer" alt="" src="./blockTest.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="blockTest.usdz"></model-viewer>
-                <br>
-                <br>
-                <span>Cave GLB and USD</span>
-                <model-viewer class="viewer" alt="" src="./cave.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="cave.usd"></model-viewer>
-                <br>
-                <br>
-                <span>Grand Canyon</span>
-                <model-viewer class="viewer" alt="" src="./gc.gltf" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="gc.usdz"></model-viewer>
+                <div class="floatLeft">
+                    <span>Basic Shed</span>
+                    <model-viewer class="viewer" alt="" src="./shed.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="shed.usd"></model-viewer>
+                </div>
+                <div class="floatRight">
+                    <span>Basic Block Cave</span>
+                    <model-viewer class="viewer" alt="" src="./blockCave.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="blockCave.usd"></model-viewer>
+                </div>
+                <div class="floatLeft">
+                    <span>Tilt Brush Cave</span>
+                    <model-viewer class="viewer" alt="" src="./cave.glb" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="cave.usd"></model-viewer>
+                </div>
+                <div class="floatRight">
+                    <span>Grand Canyon Elevation</span>
+                    <model-viewer class="viewer" alt="" src="./gc.gltf" camera-controls ar ar-modes="webxr scene-viewer quick-look fallback" ios-src="gc.usdz"></model-viewer>
+                </div>
             </div>
         </div>
 
